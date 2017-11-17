@@ -1,5 +1,4 @@
-#<span style="color:#2b7db0">BlueOcean Pay HongKong Api documents</span>
-
+<span style="color:#2b7db0">BlueOcean Pay HongKong Api documents</span>
 
 
 ## 1. 接口规则
@@ -21,39 +20,39 @@
  
 ### 1.2 参数签名
 
-1. 假设请求参数如下：
+1.2.1. 假设请求参数如下：
 
-   ```
+```
 {
       "appid":10000,
       "body":"test"
 }
-   ```
+```
 
-2. 将参数按照键值对（key=value）的形式排列,按照参数名ASCII字典序排序,并用&连接
+1.2.2. 将参数按照键值对（key=value）的形式排列,按照参数名ASCII字典序排序,并用&连接
 
-   ```
+```
 string = appid=10000&body=test
-   ```
+```
 
-3. 再最后拼接上密钥字符串&key=secretkeyXXX
+1.2.3. 再最后拼接上密钥字符串&key=secretkeyXXX
 
-   ```
+```
 stringTemp = string + '&key=' + secretkeyXXX
-   ```
+```
 
    
-4. 最后MD5签名,字符串转换成大写
+1.2.4. 最后MD5签名,字符串转换成大写
 
-   ```
+```
 sign = strtoupper(md5(stringTemp))
-   ```
+```
 
   
 ### 1.3 PHP示例代码：
 
 
-   ```
+```
 <?php
 /**
  * 参数数组数据签名
@@ -67,7 +66,7 @@ function signData($data,$key){
 	$uri = $uri.'&key='.$key;
 	return strtoupper(md5($uri));
 }
-   ```
+```
    
 
 ## 2. Api List
