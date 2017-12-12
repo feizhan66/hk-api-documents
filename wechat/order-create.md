@@ -33,8 +33,8 @@ api：
 终端IP|spbill\_create\_ip|是|String(16)|提交用户端ip
 交易结束时间|time_expire|否|String(14)|时间格式为YYYYMMDDHHmmss  20170101080000
 订单优惠标记|goods_tag|否|String(32)|商品标记，代金券或立减优惠功能的参数
-通知地址|notify_url|是|String(256)|接收微信支付异步通知回调地址
-商品ID|product_id|否|String(32)|交易类型为NATIVE时，本项必填
+通知地址|notify_url|否|String(256)|接收微信支付异步通知回调地址
+商品ID|product_id|否|String(32)|
 用户标识|openid|否|String(128)|交易类型为JSAPI时，本项必填
 
 
