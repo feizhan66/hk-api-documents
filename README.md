@@ -71,11 +71,23 @@ function signData($data,$key){
 
 ## 2. Api List
 
-### Api endpoint
+### Api Endpoints
 
 ```
+HongKong
 https://api.hk.blueoceanpay.com
+
+Australia
+https://api.au.blueoceanpay.com
+
+United States
+https://api.us.blueoceanpay.com
+
+United Kingdom
+https://api.uk.blueoceanpay.com
+
 ```
+
 
 ### 2.1 Order (订单)
 
@@ -101,6 +113,12 @@ https://api.hk.blueoceanpay.com
 
 ```
 /wechat/order/reverse
+```
+
+2.1.4. [Order List (订单列表)](wechat/order-list.md)
+
+```
+/wechat/order/list
 ```
 
 ### 2.2 Payment (支付)

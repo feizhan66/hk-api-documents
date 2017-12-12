@@ -6,7 +6,7 @@
 
 goods_detail 服务商必填 []：  
 └ goods_id String 必填 32 商品的编号  
-└ wxpay_goods_id String 可选 32 微信支付定义的统一商品编号  
+└ wxpay\_goods\_id String 可选 32 微信支付定义的统一商品编号  
 └ goods_name String 必填 256 商品名称  
 └ quantity Int 必填 商品数量  
 └ price Int 必填 商品单价，单位为分  

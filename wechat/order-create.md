@@ -28,9 +28,9 @@ api：
 商品描述|body|是|String(128)|商品或支付单简要描述
 商品详情|detail|否|String(8192)|商品详细列表，使用Json格式，格式请参考【商品详情格式】
 附加数据|attach|否|String(127)|附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
-商户订单号|out_trade_no|是|String(32)|商户系统自定义订单号
+商户订单号|out\_trade_no|是|String(32)|商户系统自定义订单号
 标价金额|total_fee|是|Int|此处单位为港币最小单位分
-终端IP|spbill_create_ip|是|String(16)|提交用户端ip
+终端IP|spbill\_create\_ip|是|String(16)|提交用户端ip
 交易结束时间|time_expire|否|String(14)|时间格式为YYYYMMDDHHmmss  20170101080000
 订单优惠标记|goods_tag|否|String(32)|商品标记，代金券或立减优惠功能的参数
 通知地址|notify_url|是|String(256)|接收微信支付异步通知回调地址
@@ -42,7 +42,7 @@ api：
 字段|变量名|必填|类型|描述
 ----|----|----|----|----
 返回码|code|是|String(32)|返回码，请参考返回码表
-返回信息|msg|是|String(256)|返回信息，成功信息或错误信息
+返回信息|message|是|String(256)|返回信息，成功信息或错误信息
 返回数据|data|否|Array/String|返回数据集或其他提示信息
   
 ###### 如果code=200,data参数：  
