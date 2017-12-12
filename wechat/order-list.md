@@ -20,6 +20,7 @@ api：
 签名|sign|是|String(32)|详情见签名规则
 分页参数|page|否|Int|分页参数:第几页 默认值:1
 每页记录数|limit|否|Int|每页条目数 默认值:10
+门店Id|store_id|否|Int|门店Id, 登录接口总获取的store_id>0是填写
 
 #### 返回结果
 

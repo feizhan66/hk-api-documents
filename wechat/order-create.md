@@ -36,6 +36,7 @@ api：
 通知地址|notify_url|否|String(256)|接收微信支付异步通知回调地址
 商品ID|product_id|否|String(32)|
 用户标识|openid|否|String(128)|交易类型为JSAPI时，本项必填
+门店Id|store_id|否|Int|门店Id, 登录接口总获取的store_id>0是填写
 
 
 #### 返回结果
