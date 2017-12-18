@@ -15,15 +15,25 @@ api：
 
 字段|变量名|必填|类型|描述
 ----|----|----|----|----
-接口ID|appid|是|String(32)|由蓝海支付提供的接口应用ID
-门店ID|store_id|否|Int|登录获取的门店id
+接口ID|appid|是|String(32)|由蓝海支付提供的接口应用ID(或通过登录接口获取)
 签名|sign|是|String(32)|详情见签名规则
 分页参数|page|否|Int|分页参数:第几页 默认值:1
 每页记录数|limit|否|Int|每页条目数 默认值:10
 门店Id|store_id|否|Int|门店Id, 登录接口总获取的store_id>0是填写
-交易状态|trade_state|否|String|交易状态
-开始时间|start_time|否|String|按照创建时间查询订单
-结束时间|end_time|否|String|按照创建时间查询订单
+交易状态|trade_state|否|String|交易状态 如 SUCCESS,REFUND
+开始时间|start_time|否|String|按照创建时间查询订单 如 2017-12-12
+结束时间|end_time|否|String|按照创建时间查询订单 如2017-12-13
+
+#### trade_state
+```
+NOTPAY:未支付
+SUCCESS:支付成功
+REFUND:已退款
+CLOSED:已关闭
+REVOKED:已撤销
+USERPAYING:支付中
+PAYERROR:支付异常
+```
 
 #### 返回结果
 
