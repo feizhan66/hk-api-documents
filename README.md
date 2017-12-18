@@ -156,13 +156,13 @@ e.g. 商户门店id为100001的商家门店收银台
 
 ### 2.4 Misc (其他)
 
-2.4.1 [汇率查询](wechat/exchangerate-query.md)
+2.4.1 [汇率查询]
 
 ```
 /wechat/exchangerate/query
 ```
 
-2.4.2 [用户登录](user/login.md)
+2.4.2 [用户登录](user-login.md)
 
 ```
 /user/login
