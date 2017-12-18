@@ -180,3 +180,8 @@ e.g. 商户门店id为100001的商家门店收银台
 
 [api request params examples ](wechat/api-request-params-examples.md)
 
+
+### 3. 其他
+1. [错误代码](/wechat/response-code-list.md)
+2. [特殊参数规范](/wechat/response-field-list.md)
+
