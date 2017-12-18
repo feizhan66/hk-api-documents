@@ -1,5 +1,13 @@
 <span style="color:#2b7db0">BlueOcean Pay HongKong Api documents</span>
 
+## 0. 场景解释与流程
+
+1. [POS机客户端接入](scene/pos-client.md)
+2. 刷卡支付(客户被扫) `待完善`
+3. 扫码支付(客户主扫) `待完善`
+4. 公众号支付  `待完善`
+
+（点击以上蓝字可以跳转）
 
 ## 1. 接口规则
 
