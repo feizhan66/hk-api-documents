@@ -11,7 +11,7 @@ POS机线下常用的收款场景：
 ### 客户端主要功能模块
 
 1. 门店用户登录 [登录接口](/user-login.md)
-2. 输入金额收款(可以选择收款方式：主扫、被扫) [统一下单接口](/wechat/order-create.md) | [刷卡支付接口](/wechat/payment-micropay.md)
+2. 输入金额收款(可以选择收款方式：主扫、被扫) [统一下单接口](/wechat/order-create.md) | [刷卡支付接口](/wechat/payment-micropay.md)     
 (若无法马上获取订单支付状态时，请按时间间隔`轮询`查询订单状态 [订单查询](/wechat/order-query.md))
 4. 付款订单列表(收银员可以按照日期和状态来筛选) [订单列表接口](/wechat/order-list.md) 
 6. 退款订单列表(收银员可以按照日期和状态来筛选) [退款列表接口](/wechat/refund-list.md)
