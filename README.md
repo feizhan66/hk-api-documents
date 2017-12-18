@@ -4,7 +4,7 @@
 
 1. [POS机客户端接入](scene/pos-client.md)
 2. [PC在线商城接入](scene/pc-online.md)
-3. 刷卡支付(客户被扫) `待完善`
+3. [刷卡支付(客户被扫) 同POS机方案](scene/pos-client.md)
 4. [扫码支付(客户主扫)](scene/pc-online.md)
 5. 公众号支付  `待完善`
 
