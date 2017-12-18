@@ -140,6 +140,12 @@ https://api.uk.blueoceanpay.com
 /wechat/payment/refundquery
 ```
 
+2.2.4 [Refund List (退款列表)](wechat/refund-list.md)
+
+```
+/wechat/refund/list
+```
+
 ### 2.3 Checkout (收银台)
 
 用户扫描商家门店二维码之后打开的移动端h5页面
