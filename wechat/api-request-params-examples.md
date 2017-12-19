@@ -23,7 +23,8 @@ request data:
   "out_trade_no": "201710161001",
   "total_fee": 100,
   "spbill_create_ip": "127.0.0.1",
-  "auth_code": "135753487434252033"
+  "auth_code": "135753487434252033",
+  "sign":"8C31CB157403F9DE73A10822BB5ED21B"
 }
 
 ```
@@ -45,7 +46,8 @@ request data:
   "out_refund_no":"2017101917303010001",
   "total_fee":"2",
   "refund_fee":"2",
-  "refund_desc":""
+  "refund_desc":"refund",
+  "sign": "75F21CC379348C27C4D7671960D1928A"
 }
 
 ```
@@ -58,7 +60,8 @@ api: `/wechat/payment/refundquery`
 ```
 {
   "appid": "100018",
-  "out_trade_no": "20171019173009269929"
+  "out_trade_no": "20171019173009269929",
+  "sign": "7D7B97885AFD52345DB0BBA40F7C9563"
 }
 
 ```
@@ -82,7 +85,8 @@ request data:
   "out_trade_no": "20171103161001",
   "total_fee":2,
   "spbill_create_ip":"127.0.0.1",
-  "trade_type":"NATIVE"
+  "trade_type":"NATIVE",
+  "sign": "0E4F15BF0DB527B17BEA1C6E3854EDEE"
 }
 ```
 
@@ -111,7 +115,8 @@ request data:
 ```
 {
   "appid": "100004",  
-  "out_trade_no": "201710161001"
+  "out_trade_no": "201710161001",
+  "sign": "9AE48D02F6C4AB78E6E88E69864218CE"
 }
 
 ```
@@ -125,7 +130,8 @@ request data:
 ```
 {
   "appid": "100018",  
-  "out_trade_no": "20171020152851532725"
+  "out_trade_no": "20171020152851532725",
+  "sign": "879BCAFA20E0B1D63507125E48039D08"
 }
 
 ```
@@ -140,10 +146,16 @@ request data:
 ```
 {
   "appid": "100018",  
-  "out_trade_no": "20171020151457874992"
+  "out_trade_no": "20171020151457874992",
+  "sign": "0DC7D82A0A621075D3729281FA61CF12"
 }
 
 ```
+
+### 以上示例中的sign参数因key的不同可能会不可用，实际调试过程中，用自己的key去计算签名。
+
+
+
 
 
 

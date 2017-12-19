@@ -155,6 +155,13 @@ https://api.uk.blueoceanpay.com
 /wechat/refund/list
 ```
 
+2.2.4 [Finance Settlement (结算打印)](finance-settlement.md)
+
+```
+/finance/settlement
+```
+
+
 ### 2.3 Checkout (收银台)
 
 用户扫描商家门店二维码之后打开的移动端h5页面

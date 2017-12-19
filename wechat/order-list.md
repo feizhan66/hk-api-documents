@@ -19,7 +19,7 @@ api：
 签名|sign|是|String(32)|详情见签名规则
 分页参数|page|否|Int|分页参数:第几页 默认值:1
 每页记录数|limit|否|Int|每页条目数 默认值:10
-门店Id|store_id|否|Int|门店Id, 登录接口总获取的store_id>0是填写
+门店Id|store_id|否|Int|门店Id, 登录接口获取的store_id > 0 时填写
 交易状态|trade_state|否|String|交易状态 如 SUCCESS,REFUND
 开始时间|start_time|否|String|按照创建时间查询订单 如 2017-12-12
 结束时间|end_time|否|String|按照创建时间查询订单 如2017-12-13
