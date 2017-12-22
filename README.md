@@ -184,10 +184,25 @@ e.g. 商户门店id为100001的商家门店收银台
 /wechat/exchangerate/query
 ```
 
-2.4.2 [用户登录](user-login.md)
+
+### 2.5 User (用户)
+
+2.5.1 [用户登录](user-login.md)
 
 ```
 /user/login
+```
+
+2.5.2 [修改密码](user-password.md)
+
+```
+/user/password
+```
+
+2.5.2 [添加用户](user-create.md)
+
+```
+/user/create
 ```
 
 ### 2.5 请求参数参考
