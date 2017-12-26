@@ -205,6 +205,21 @@ e.g. 商户门店id为100001的商家门店收银台
 /user/create
 ```
 
+2.5.3 [删除用户](user-remove.md)
+
+```
+/user/remove
+```
+
+
+2.5.4 [用户列表](user-list.md)
+
+```
+/user/list
+```
+
+
+
 ### 2.5 请求参数参考
 
 [api request params examples ](wechat/api-request-params-examples.md)
