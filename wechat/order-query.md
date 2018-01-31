@@ -63,8 +63,39 @@ api：
 微信支付订单号|transaction_id|是|String(32)|微信支付订单号
 标价币种|fee_type|否|String(16)|标价币种
 标价金额|total_fee|是|Int|标价金额
-支付完成时间|time_end|是|String(14)|支付完成时间时间格式为YYYYMMDDHHmmss
+支付完成时间|time_end|是|String(14)|支付完成时间时间格式为YYYY-MM-DD HH:mm:ss
 用户标识|openid|否|String(128)|用户标识
 是否关注公众号|is_subscribe|否|String(1)|是否关注了公众号
 设备号|device_info|否|String(32)|设备号
 商家数据包|attach|否|String(128)|商家数据包，原样返回
+
+
+### 成功返回的示例：
+```
+
+{
+	"code": 200,
+	"message": "請求成功",
+	"data": {
+		"body": "BlueOceanPay",
+		"transaction_id": "4200000055201801314293325658",
+		"out_trade_no": "20180131165035334165",
+		"fee_type": "HKD",
+		"total_fee": "2",
+		"cash_fee_type": "CNY",
+		"cash_fee": "1",
+		"trade_type": "MICROPAY",
+		"detail": "Coffee",
+		"attach": "",
+		"time_end": "2018-01-31 16:50:44",
+		"trade_state": "SUCCESS",
+		"bank_type": "CFT",
+		"appid": "1000258",
+		"mch_name": "BlueOcean Pay",
+		"nonce_str": "d11CeiyVWd",
+		"is_subscribe": "N",
+		"sign": "D44D5B63443AB4004B4F9A416621CFDB"
+	}
+}
+
+```
