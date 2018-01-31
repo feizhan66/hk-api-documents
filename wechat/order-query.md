@@ -59,7 +59,7 @@ api：
 付款银行|bank_type|是|String(16)|银行类型
 现金支付金额|cash_fee|是|Int|订单现金支付金额
 现金支付币种|cash\_fee_type|是|String(16)|现金支付的币种，默认为人民币
-商户订单号|out_trade_no|是|String(32)|商户系统自定义的订单号
+商户订单号|out\_trade\_no|是|String(32)|商户系统自定义的订单号
 微信支付订单号|transaction_id|是|String(32)|微信支付订单号
 标价币种|fee_type|否|String(16)|标价币种
 标价金额|total_fee|是|Int|标价金额
