@@ -33,21 +33,28 @@
 
 ```
 {
-      "appid":10000,
-      "body":"test"
+    "appid":"1000010",
+    "name":"BlueOcean Pay",
+    "region":"HK",
+    "business":"Online payment"
 }
 ```
 
 1.2.2. 将参数按照键值对（key=value）的形式排列,按照参数名ASCII字典序排序,并用&连接
 
 ```
-string = appid=10000&body=test
+string = appid=1000010&business=Online payment&name=BlueOcean Pay&region=HK
 ```
 
-1.2.3. 再最后拼接上密钥字符串&key=secretkeyXXX
+1.2.3. 再最后拼接上密钥字符串&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb
 
 ```
 stringTemp = string + '&key=' + secretkeyXXX
+```
+即 stringTemp 为:
+
+```
+appid=1000010&business=Online payment&name=BlueOcean Pay&region=HK&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb
 ```
 
    
@@ -55,6 +62,12 @@ stringTemp = string + '&key=' + secretkeyXXX
 
 ```
 sign = strtoupper(md5(stringTemp))
+```
+
+sign的值为:
+
+```
+08C612FB4D2D52C8C913EA00E3DABC8B
 ```
 
   
@@ -69,11 +82,19 @@ sign = strtoupper(md5(stringTemp))
  * @param string $key 密钥
  * @return string 签名
  */
-function signData($data,$key){
-	ksort($data);
-	$uri = http_build_query($data);
-	$uri = $uri.'&key='.$key;
-	return strtoupper(md5($uri));
+function signData($data,$key){	
+	$ignoreKeys = ['sign', 'key'];
+    ksort($data);
+    $signString = '';
+    foreach ($data as $k => $v) {
+        if (in_array($k, $ignoreKeys)) {
+            unset($data[$k]);
+            continue;
+        }
+        $signString .= "{$k}={$v}&";
+    }
+    $signString .= "key={$key}";
+	return strtoupper(md5($signString));
 }
 ```
    
