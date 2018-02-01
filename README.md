@@ -49,7 +49,7 @@ string = appid=1000010&business=Online payment&name=BlueOcean Pay&region=HK
 1.2.3. 再最后拼接上密钥字符串&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb
 
 ```
-stringTemp = string + '&key=' + sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb
+stringTemp = string + '&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb'
 ```
 即 stringTemp 为:
 
