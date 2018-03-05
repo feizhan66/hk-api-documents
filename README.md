@@ -4,9 +4,9 @@
 
 ### 1.1 接口协议
 
-#### 调用BlueOcean Pay接口须准守以下规则：
+#### 调用BlueOcean Pay接口须遵守以下规则：
 
-1. 请求方式一律使用 POST 并将请求的数据参数的json字符串以 http body的方式传递
+1. 请求方式一律使用 POST 并将请求的数据参数的JSON字符串以 http body的方式传递
 
 2. 请求的数据格式统一使用JSON格式，若参数有json字符串请转义双引号（\"）
 
@@ -34,7 +34,7 @@
 str = "appid=1000010&business=Online payment&name=BlueOcean Pay&region=HK"
 ```
 
-1.2.3. 再最后拼接上密钥字符串&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb
+1.2.3. 在最后拼接上密钥字符串 `&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb`
 
 ```
 str += "&key=sxkj0RH9qMxdaxo0sJ8xlbki4ssOjvXb"
@@ -46,7 +46,7 @@ appid=1000010&business=Online payment&name=BlueOcean Pay&region=HK&key=sxkj0RH9q
 ```
 
    
-1.2.4. 最后MD5签名,字符串转换成大写
+1.2.4. 最后计算MD5值并将md5字符串转换成大写
 
 ```
 sign = strtoupper(md5(str))
