@@ -107,7 +107,7 @@ function signData($data,$key){
 
 ### 1.5 接口域名
 
-在不同的業務區域，使用不通過的域名
+在不同的業務區域，使用不同的域名
 
 ```
 HongKong
