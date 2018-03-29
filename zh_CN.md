@@ -674,7 +674,7 @@ CHANGE:退款异常
 
 字段|变量名|必填|类型|描述
 ----|----|----|----|----
-email|帐号|是|String(32)|登录帐号
+email|email|是|String(32)|登录帐号
 password|password|是|String(32)|密码
 
 #### 使用 POST 并将请求的数据参数的json字符串以 http body的方式传递
@@ -737,10 +737,10 @@ password|password|是|String(32)|密码
 字段|变量名|必填|类型|描述
 ----|----|----|----|----
 appid|appid|是|String(32)|appid,登录时获取
-sign|签名|是|String(32)| 
-email|帐号|是|String(32)|登录帐号
-password|密码|是|String(32)|
-type|帐号类型|是|String(32)| merchant -> 商户 , store -> 门店, cashier -> 收银
+sign|sign|是|String(32)| 
+email|email|是|String(32)|登录帐号
+password|password|是|String(32)|
+type|type|是|String(32)| merchant -> 商户 , store -> 门店, cashier -> 收银
 
 请求参数示例:
 
@@ -795,11 +795,11 @@ type|帐号类型|是|String(32)| merchant -> 商户 , store -> 门店, cashier 
 字段|变量名|必填|类型|描述
 ----|----|----|----|----
 appid|appid|是|String(32)|appid,登录时获取
-sign|签名|是|String(32)|
-email|帐号|是|String(32)|登录邮箱帐号
-old|原始密码|是|String(32)|密码
-new|新密码|是|String(32)|
-repeat|重复密码|是|String(32)|
+sign|sign|是|String(32)|
+email|email|是|String(32)|登录邮箱帐号
+old password|old|是|String(32)|密码
+new password |new|是|String(32)|
+repeat password|repeat|是|String(32)|
 
 
 
@@ -944,7 +944,7 @@ appid|appid|是|String(32)|appid,登录时获取
 
 ## Update
 
-2018.03.21
+2018.03.29
 
 
 

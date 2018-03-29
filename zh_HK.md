@@ -193,8 +193,6 @@ data   | 業務數據，需根據相應接口進行邏輯處理,有時為空(不
 ```
 
 
-
-
 ## 2 接口列表
 
 ### 2.1 支付
@@ -676,7 +674,7 @@ CHANGE:退款異常
 
 字段|變量名|必填|類型|描述
 ----|----|----|----|----
-email|帳號|是|String(32)|登錄帳號
+email|email|是|String(32)|登錄帳號
 password|password|是|String(32)|密碼
 
 #### 使用 POST 並將請求的數據參數的json字符串以 http body的方式傳遞
@@ -739,10 +737,10 @@ password|password|是|String(32)|密碼
 字段|變量名|必填|類型|描述
 ----|----|----|----|----
 appid|appid|是|String(32)|appid,登錄時獲取
-sign|簽名|是|String(32)| 
-email|帳號|是|String(32)|登錄帳號
-password|密碼|是|String(32)|
-type|帳號類型|是|String(32)| merchant -> 商戶 , store -> 門店, cashier -> 收銀
+sign|sign|是|String(32)| 
+email|email|是|String(32)|登錄帳號
+password|password|是|String(32)|
+type|type|是|String(32)| merchant -> 商戶 , store -> 門店, cashier -> 收銀
 
 請求參數示例:
 
@@ -797,11 +795,11 @@ type|帳號類型|是|String(32)| merchant -> 商戶 , store -> 門店, cashier 
 字段|變量名|必填|類型|描述
 ----|----|----|----|----
 appid|appid|是|String(32)|appid,登錄時獲取
-sign|簽名|是|String(32)|
-email|帳號|是|String(32)|登錄郵箱帳號
-old|原始密碼|是|String(32)|密碼
-new|新密碼|是|String(32)|
-repeat|重復密碼|是|String(32)|
+sign|sign|是|String(32)|
+email|email|是|String(32)|登錄郵箱帳號
+old password|old|是|String(32)|密碼
+new password |new|是|String(32)|
+repeat password|repeat|是|String(32)|
 
 
 
@@ -946,16 +944,4 @@ appid|appid|是|String(32)|appid,登錄時獲取
 
 ## Update
 
-2018.03.21
-
-
-
-
-
-
-
-
-
-
-
-
+2018.03.29
