@@ -123,35 +123,72 @@ https://api.uk.blueoceanpay.com
 
 ```
 
-### 1.6 Response code
+### 1.6 Response Code Description
 
-code|message|detail|solution
-----|----|----|----
-200|Success|Normal|According to specific business logic
-201|Card swiping result unknown status|The system is busy, the user pays for medium reason|waits 15s through [query order API] query
-404|Cannot find this interface | Bad interface address | Check interface address based on documentation
-4001|Data format error | Data format mismatch | Please use JSON data format
-4002|Invalid APPID|APPID does not exist|Check if APPID is wrong
-4003|Lack of parameters|Lack of parameters|Complete parameters as prompted
-4004|Signature Error | Signature Verification Error | Check Code Signing Logic
-4005|Communication Error|WeChat Server Error|Troubleshooting Codes After Troubleshooting Codes, Send Feedback to Blue Ocean Technical Staff to Help Solve Problems
-4006|Server busy|Server busy|Recall this interface later
-4007|Request method error|Request method error|Please use POST method
-40100|Invalid request||based on prompt processing
-40101|Orders have been paid||According to the specific business logic
-40102|Order does not exist|| handled in accordance with the specific business logic
-40103|Order is closed||According to specific business logic
-40104|Order has been revoked||According to the specific business logic
-40105|Order Refunded||According to Specific Business Logic
-40106|Duplicate Order Numbers|| Merchant Regenerates Order Numbers
-40107|The balance is insufficient||Check if the balance of the merchant account is insufficient
-40108|Order exceeded refund period||Cannot complete refund
-40109|Lack of parameters|| Follow the prompts to complete parameters
-40110|Incorrect encoding format||Please use UTF8 encoding format
-40111|Every two-dimensional code can only be used once||Reacquire user payment QR code
-40400|The system is busy|The system is busy|The system is busy and try again later
-40500|Wechat Error||Feedback to Blue Ocean Technician to help you solve problems
-40600|Unknown error|(not included in error)|Feedback to Blue Ocean technicians to help you solve problems
+Response Code | Response Code Description | Logic Processing
+-----|--------------|-----------------------------------------------
+0 | Common Errors | Uncategorized Errors, Users Are Prompted or Tolerated
+200 | Success | Dealing with specific business logic
+201 | Swiping card transaction unknown status | system busy, user payment, input password, etc., need to call `/ order / query` query transaction status
+404 | Interface address error | check interface address based on documentation
+4001 | Request data format error | Please use JSON data format
+4002 | Invalid AppId | Checked AppId and the corresponding key is correct
+4003 | Missing Parameters | Pass Correct Parameters
+4004 | Signature error | Check signature logic and the corresponding key is correct
+4005 | Communication Error | Follow the prompts to troubleshoot the code
+4006 | Server is busy | Recall the interface later
+4007 | Request method error | Please use POST method
+40100 | invalid request||
+40101 | Order paid |
+40102 | Order does not exist |
+40103 | Order closed |
+40104 | Order cancelled |
+40105 | Order refunded |
+40106 | Duplicate order number |
+40107 | Insufficient balance | Check if the balance of the merchant account is insufficient
+40108 | Order over refund period | Can't complete refund
+40109 | Missing Parameters | Completing Parameters According to Interface Tips
+40110 | Incorrect encoding format | Please use UTF-8 encoding format
+40111 |Each QR code can only be used once |Reacquire user payment QR code
+40400 | System is busy | The system is busy, try again later
+40500 | Payment Error | Prompt User for Corresponding Information
+40600 | Unknown Error | Uncategorized Error
+
+
+### 1.7 Universal Response Data Structure
+
+The response data is in Json format. The Key-Map description is as follows:
+
+Property | Description | Example
+------- | ------ | -------
+Code | Business Response Codes | 200
+Message|Business prompt message, according to the business result, the attribute value can be directly used to prompt the user | Success
+Data | Business data, which needs to be processed logically according to the corresponding interface, sometimes empty (no attribute exists) |
+
+Successful example
+
+```
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "appid": "1000258",
+    "attach": "",
+    "bank_type": "",
+    "body": "Shopping"
+  }
+}
+```
+
+
+Failed example
+
+```
+{
+  "code": 40500,
+  "message": "Insufficient balance"
+}
+```
 
 
 
