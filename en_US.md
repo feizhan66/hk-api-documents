@@ -391,6 +391,48 @@ Refund Description|refund_desc|No|String|Refund Description
 Password|password|No|String|Refund password
 
 
+
+
+#### Response
+
+```
+{
+   "appid": "1000258",
+   "attach": "",
+   "bank_type": "",
+   "body": "",
+   "cash_fee": "0",
+   "cash_fee_type": "",
+   "create_time": "1523501255",
+   "detail": "",
+   "discount": "0",
+   "fee_type": "HKD",
+   "id": "64260",
+   "is_subscribe": "N",
+   "mch_name": "BlueOcean Pay",
+   "nonce_str": "LYuqnmuIlk",
+   "out_refund_no": "11201804121050043286306633",
+   "out_trade_no": "11201804121047337839520818",
+   "pay_amount": "10",
+   "provider": "alipay",
+   "qrcode": "",
+   "refund_desc": "",
+   "refund_fee": "10",
+   "refund_status": "SUCCESS",
+   "refund_time": "2018-04-12 10:50:06",
+   "sn": "11201804121047337839520818",
+   "time_end": 1523501255,
+   "total_fee": "10",
+   "trade_state": "REFUND",
+   "trade_type": "MICROPAY",
+   "transaction_id": "2NMJVPOM96DMZ70RL8",
+   "wallet": "",
+   "sign": "FC173A8B25C8AACF1BD3CFFF908F3632"
+}
+
+```
+
+
 ### 2.3 Oder Operations
 
 Order status operation (query, close, undo) using similar parameters
