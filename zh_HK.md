@@ -389,6 +389,71 @@ appid|appid|是|String|appid,登錄時獲取
 退款描述|refund_desc|否|String|退款說明
 退款密碼|password|是|String|退款密碼
 
+#### 返回結果
+
+字段|變量名|必填|類型|描述
+----|----|----|----|----
+返回碼|code|是|String(32)|返回碼，請參考返回碼表
+返回信息|message|是|String(256)|返回信息，成功信息或錯誤信息
+返回數據|data|否|Array/String|返回數據集或其他提示信息
+  
+###### 如果code=200,data参数：  
+
+字段|變量名|必填|類型|描述
+----|----|----|----|----
+支付提供方訂單號|transaction_id|是|String(28)|微信，支付寶訂單號
+商戶訂單號|out\_trade_no|是|String(32)|商戶訂單號
+商戶退單號|out\_refund_no|是|String(32)|商戶退單號
+微信退單號|refund_id|是|String(64)|微信退單號
+標價金額|total_fee|是|Int|最小單位港幣分
+標價幣種|fee_type|是|String(8)|一般是HKD
+退款金額|refund\_fee|是|Int|最小單位港幣分
+退款幣種|refund\_fee_type|是|String(8)|貨幣如 HKD
+現金支付金額|cash_fee|是|Int|最小單位 人民幣分
+現金支付幣種|cash\_fee_type|是|String(8)| 支付貨幣如 CNY
+現金退款金額|cash\_refund_fee|是|Int|最小單位人民幣分
+現金退款幣種|cash\_refund\_fee_type|是|String(8)|默認是CNY
+匯率|rate|是|String(16)|匯率
+
+
+#### 响应示例
+
+```
+{
+   "appid": "1000258",
+   "attach": "",
+   "bank_type": "",
+   "body": "",
+   "cash_fee": "0",
+   "cash_fee_type": "",
+   "create_time": "1523501255",
+   "detail": "",
+   "discount": "0",
+   "fee_type": "HKD",
+   "id": "64260",
+   "is_subscribe": "N",
+   "mch_name": "BlueOcean Pay",
+   "nonce_str": "LYuqnmuIlk",
+   "out_refund_no": "11201804121050043286306633",
+   "out_trade_no": "11201804121047337839520818",
+   "pay_amount": "10",
+   "provider": "alipay",
+   "qrcode": "",
+   "refund_desc": "",
+   "refund_fee": "10",
+   "refund_status": "SUCCESS",
+   "refund_time": "1523501406",
+   "sn": "11201804121047337839520818",
+   "time_end": 1523501255,
+   "total_fee": "10",
+   "trade_state": "REFUND",
+   "trade_type": "MICROPAY",
+   "transaction_id": "2NMJVPOM96DMZ70RL8",
+   "wallet": "",
+   "sign": "FC173A8B25C8AACF1BD3CFFF908F3632"
+}
+
+```
 
 ### 2.3 訂單操作
 

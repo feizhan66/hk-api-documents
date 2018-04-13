@@ -419,7 +419,7 @@ Password|password|No|String|Refund password
    "refund_desc": "",
    "refund_fee": "10",
    "refund_status": "SUCCESS",
-   "refund_time": "2018-04-12 10:50:06",
+   "refund_time": "1523501406",
    "sn": "11201804121047337839520818",
    "time_end": 1523501255,
    "total_fee": "10",
