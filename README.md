@@ -9,3 +9,13 @@
 
 ### [English](en_US.md)
 
+
+# Online store integration
+
+### [magento](https://github.com/blueoceanpay/magento2-blueoceanpay)
+
+
+### [ecshop](https://github.com/blueoceanpay/ecshop-payment-extension)
+
+### [opencart](https://github.com/blueoceanpay/opencart-payment-extension)
+
