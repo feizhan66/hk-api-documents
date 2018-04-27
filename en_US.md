@@ -257,9 +257,8 @@ Create time|create_time|Int|Timestamps e.g 1518155270
 Pay time|time_end|Int|Successful payment timestamp e.g 1518155297
 Trade State|trade_state|String| NOTPAY,PAID
 Qrcode text|qrcode|String|qrcode e.g "https://qr.alipay.com/bax03112k12liy7lrysg2004", "weixin://wxpay/bizpayurl?pr=HBXdDeM"
-Order Amount|total_fee|Int|Unit "Cent" e.g 10
+payment amount|total_fee|Int|Unit "Cent" e.g 10
 Discount|discount|Int|Unit "Cent" e.g 2
-Payment Amount|pay_amount|Int|(total_fee-discount) e.g 8
 Signature |sign|String| e.g "7FB42F08C85670A86431F97109DE8683"
 
 

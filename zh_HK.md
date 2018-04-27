@@ -256,9 +256,8 @@ PAYERROR:支付異常
 支付時間|time_end|Int|成功支付的時間戳 如1518155297
 交易狀態|trade_state|String| NOTPAY
 二維碼文本|qrcode|String|掃碼支付時存在，客戶端使用第三方工具，將該內容生成二維碼，供用戶掃描付款 如 "https://qr.alipay.com/bax03112k12liy7lrysg2004", "weixin://wxpay/bizpayurl?pr=HBXdDeM"
-訂單總金額|total_fee|Int|如:10
-優惠金額|discount|Int|如:2
-實際支付金額|pay_amount|Int|(total_fee-discount) 如:8
+實際支付金額|total_fee|Int|用戶需要支付的金額 如:10
+優惠金額|discount|Int|優惠金額，用於商家自身系統集成，顯示 如:2
 數據簽名|sign|String|如"7FB42F08C85670A86431F97109DE8683",用於本地校驗
 
 

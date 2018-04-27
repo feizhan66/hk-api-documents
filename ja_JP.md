@@ -220,9 +220,8 @@ SN |sn |文字列|例えば11201802091347484054542598一意識別子、クエリ
 支払い時間| time_end | Int |支払いの成功のタイムスタンプなど1518155297
 貿易状態| trade_state |文字列| NOTPAY、PAID
 QRコードのテキスト|qrcode|文字列| QRコード例えば "https://qr.alipay.com/bax03112k12liy7lrysg2004"、 "Weixin：// wxpay / bizpayurl PR = HBXdDeM"
-注文額| total_fee | Int |単位 "Cent"、例えば10
-割引| discount | Int |単位 "Cent"、例えば2
-支払額| pay_amount | Int |（合計割引額）たとえば8
+支払額| total_fee | Int |単位 "Cent"、例えば10
+割引| discount | Int |単位 "Cent"、例えば 2
 署名|sign|文字列|たとえば "7FB42F08C85670A86431F97109DE8683"
 
 

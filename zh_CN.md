@@ -256,11 +256,9 @@ PAYERROR:支付异常
 支付时间|time_end|Int|成功支付的时间戳 如1518155297
 交易状态|trade_state|String| NOTPAY
 二维码文本|qrcode|String|扫码支付时存在，客户端使用第三方工具，将该内容生成二维码，供用户扫描付款 如 "https://qr.alipay.com/bax03112k12liy7lrysg2004", "weixin://wxpay/bizpayurl?pr=HBXdDeM"
-订单总金额|total_fee|Int|如:10
-优惠金额|discount|Int|如:2
-实际支付金额|pay_amount|Int|(total_fee-discount) 如:8
+实际支付金额|total_fee|Int|用户需要支付的金额 如:10
+优惠金额|discount|Int|优惠金额，用于商家自身系统集成，显示 如:2
 数据签名|sign|String|如"7FB42F08C85670A86431F97109DE8683",用于本地校验
-
 
 
 ### 请求示例
