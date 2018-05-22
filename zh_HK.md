@@ -224,6 +224,7 @@ appid|appid|是|String|appid,由商戶後台獲取，或者登錄獲取
 micropay|刷卡支付 此時需傳遞支付授權碼 `code` 參數
 alipay.qrcode|支付寶二維碼
 wechat.qrcode|微信二維碼
+blueocean.qrcode|混合二維碼 可以直接跳轉到qrcode對應的網址支付，也可以生成二維碼供用戶掃描
 
 支付返回後，檢查交易狀態trade_state,並根據其結果，決定是否調用訂單查詢接口進行結果查詢處理
 
@@ -313,6 +314,60 @@ PAYERROR:支付異常
   }
 }
 ```
+
+#### 混合二維碼示例
+
+請求參數
+
+```
+{
+  "appid": "1000343",
+  "discount": 0,
+  "notify_url": "https://payment.comenix.com/index/debug",
+  "payment": "blueocean.qrcode",
+  "total_fee": 13,
+  "sign": "1FBFA9773ACEA258829477ED333381BD"
+}
+```
+
+響應
+
+```
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "appid": 1000343,
+    "attach": "",
+    "bank_type": "",
+    "body": "",
+    "cash_fee": "0",
+    "cash_fee_type": "",
+    "create_time": "1526957792",
+    "detail": "",
+    "discount": "0",
+    "fee_type": "HKD",
+    "id": "97736",
+    "is_subscribe": "N",
+    "mch_name": "BlueOcean Pay",
+    "nonce_str": "kROW6XeRn6",
+    "out_trade_no": "11201805221056323300637881",
+    "pay_amount": "13",
+    "provider": "blueocean",
+    "qrcode": "http://api.hk.blueoceanpay.com/order/qrcode/97736",
+    "sn": "11201805221056323300637881",
+    "time_end": 0,
+    "total_fee": "13",
+    "trade_state": "NOTPAY",
+    "trade_type": "NATIVE",
+    "transaction_id": "",
+    "wallet": "",
+    "sign": "8663CC409008CA4ED66D1F97BDB94414"
+  }
+}
+```
+
+
 
 #### 刷卡支付示例 
 
